@@ -1,0 +1,23 @@
+{
+  "name": "sid",
+  "version": "0.0.0",
+  "description": "Yet another Discord Bot!",
+  "main": "src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Entwolker/sid.git"
+  },
+  "author": "Entwolker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Entwolker/sid/issues"
+  },
+  "homepage": "https://github.com/Entwolker/sid#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
