@@ -29,6 +29,31 @@ client.on('ready', () => {
             })
         }
     })
+
+    command(client, 'serverinfo', (message) => {
+        const { guild } = message
+        const { name, region, memberCount, owner } = guild;
+        const icon = guild.iconURL()
+        const embed = new Discord.MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle(`Serverinfo for ${name}`)
+            .setThumbnail(icon)
+            .addFields(
+                {
+                    name: 'Membercount',
+                    value: memberCount
+                },
+                {
+                    name: 'Region',
+                    value: region
+                },
+
+                {
+                    name: 'Owner',
+                    value: owner.user.tag
+                })
+        message.channel.send(embed)
+    })
 })
 
 client.login(config.token)
